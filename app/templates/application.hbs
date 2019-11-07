@@ -1,3 +1,100 @@
-<h2 id="title">Welcome to Ember</h2>
+<header>
+<nav class="navbar navbar-default" role="navigation">
+		<div class="container-fluid">
+ 			<div class="navbar header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#nav-content">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#">Название сайта</a>
+			</div>
+			<div class="collapse navbar-collapse" id="nav-content">
+				<ul class="nav navbar-nav">
+					<li >
+					{{#link-to 'index'}}Главная{{/link-to}}
+					</li>
+					<li class="dropdown-submenu">
+						<a tabindex="-1" href="#">Задачи</a>
+							<ul class="dropdown-menu">
+								<li class="dropdown-submenu">
+									<a tabindex="-1" href="#">все задачи</a>
+										<ul class="dropdown-menu">
+											<li>
+											{{#link-to 'tasksall'}}все{{/link-to}}
+											</li>
+											<li>
+											{{#link-to 'tasksallnotcompleted'}}не выполнены{{/link-to}}
+											</li>
+											<li class="dropdown-submenu">
+												<a tabindex="-1" href="#">закрытые</a>
+													<ul class="dropdown-menu">
+														<li>
+														{{#link-to 'tasksallclosedasunnecessary'}}за ненадобностью{{/link-to}}
+														</li>
+														<li>
+														{{#link-to 'tasksallclosedonpaused'}}на паузе{{/link-to}}
+														</li>
+													</ul>
+											</li>
+										</ul>
+								</li>
+								<li class="dropdown-submenu">
+									<a tabindex="-1" href="#">мои задачи</a>
+										<ul class="dropdown-menu">
+											<li>
+											{{#link-to 'tasksmytasks'}}все{{/link-to}}
+											</li>
+											<li>
+											{{#link-to 'tasksmytasksnotcompleted'}}не выполнены{{/link-to}}
+											</li>
+											<li class="dropdown-submenu">
+												<a tabindex="-1" href="#">закрытые</a>
+													<ul class="dropdown-menu">
+														<li>
+														{{#link-to 'tasksmytasksclosedasunnecessary'}}за ненадобностью{{/link-to}}
+														</li>
+														<li>
+														{{#link-to 'tasksmytasksclosedonpause'}}на паузе{{/link-to}}
+														</li>
+													</ul>
+											</li>
+										</ul>	
+								</li>
+								<li class="dropdown-submenu">
+									<a tabindex="-1" href="#">задачи от меня</a>
+										<ul class="dropdown-menu">
+											<li>
+											{{#link-to 'tasksfrommeall'}}все{{/link-to}}
+											</li>
+											<li>
+											{{#link-to 'tasksfrommenotcompleted'}}не выполнены{{/link-to}}
+											</li>
+											<li class="dropdown-submenu">
+												<a tabindex="-1" href="#">закрытые</a>
+													<ul class="dropdown-menu">
+														<li>
+														{{#link-to 'tasksfrommeclosedasunnecessary'}}за ненадобностью{{/link-to}}
+														</li>
+														<li>
+														{{#link-to 'tasksfrommeclosedonpaused'}}на паузе{{/link-to}}
+														</li>
+													</ul>
+											</li>
+										</ul>
+								</li>
+							</ul>
+						</li>
 
+						<li>
+						{{#link-to 'handbooks'}}Справочники{{/link-to}}
+						</li>
+ 
+				</ul>    
+			</div><!-- /.navbar-collapse -->
+		</div><!-- /.container-fluid -->
+	</nav>
+</header>
+<div class="container">
 {{outlet}}
+</div>
